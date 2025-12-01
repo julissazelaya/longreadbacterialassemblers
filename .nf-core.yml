@@ -11,8 +11,8 @@ lint:
   files_exist:
     - conf/igenomes.config
     - conf/igenomes_ignored.config
-    - assets/multiqc_config.yml
     - nextflow_schema.json
+    - assets/multiqc_config.yml
   schema_lint: false
   schema_params: false
   schema_description: false
@@ -20,7 +20,7 @@ lint:
 template:
   org: nf-core
   name: assemblers
-  description: NF-core pipeline for ONT long-read assembly
+  description: NF-core pipeline for ONT long-read asssembly
   author: Julie Zelaya
   version: 1.0.0dev
   force: true
