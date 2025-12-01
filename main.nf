@@ -40,6 +40,8 @@ workflow NFCORE_ASSEMBLERS {
     ASSEMBLERS (
         samplesheet
     )
+    emit:
+    multiqc_report = ASSEMBLERS.out.multiqc_report // channel: /path/to/multiqc_report.html
 }
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -78,6 +80,7 @@ workflow {
         params.outdir,
         params.monochrome_logs,
         params.hook_url,
+        NFCORE_ASSEMBLERS.out.multiqc_report
     )
 }
 

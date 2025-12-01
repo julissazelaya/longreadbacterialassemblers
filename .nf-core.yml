@@ -3,13 +3,8 @@ repository_type: pipeline
 nf_core_version: 3.5.1
 
 lint:
-  files_unchanged:
-    - .github/CONTRIBUTING.md
-    - assets/sendmail_template.txt
   nextflow_config: false
-  multiqc_config: false
   files_exist:
-    - assets/multiqc_config.yml
     - conf/igenomes.config
     - conf/igenomes_ignored.config
     - nextflow_schema.json
@@ -27,8 +22,6 @@ template:
   outdir: .
   skip_features:
     - igenomes
-    - multiqc
-    - fastqc
     - nf_schema
     - gpu
   is_nfcore: true
